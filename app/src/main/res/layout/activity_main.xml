@@ -1,111 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:id="@+id/main"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-    android:background="@drawable/mainback"
-tools:context=".MainActivity">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_200"
+    tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/toolBar"
+    <Button
+        android:id="@+id/personaldetails"
+        android:layout_width="418dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="128dp"
+        android:text="Personal Details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="131dp"
+        android:layout_height="75dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Welcome!\n Newbie"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        tools:layout_editor_absoluteX="151dp"
+        tools:layout_editor_absoluteY="108dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/parkingspot"
         android:layout_width="wrap_content"
-        android:layout_height="63dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="@dimen/_12sdp"
-        android:layout_marginEnd="25dp"
-        android:background="@color/white"
-        android:gravity="right"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="23dp"
-        android:layout_marginRight="25dp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_weight="1"
-            android:fontFamily="@font/poppins_bold"
-            android:text="Welcome!\n Newbie"
-            android:textColor="#2a364e"
-            android:textSize="@dimen/_20sdp" />
-
-
-    <ImageView
-        android:id="@+id/logoutimg"
-        android:layout_width="@dimen/_26sdp"
-        android:layout_height="@dimen/_26sdp"
-        android:layout_gravity="center"
-        android:layout_marginRight="@dimen/_10sdp"
-        android:background="@drawable/logout"
-        android:transitionName="loout_img" />
-
-</LinearLayout>
-
-    <ImageView
-        android:layout_width="47dp"
-        android:layout_height="38dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="248dp"
-        android:layout_marginRight="248dp"
-        android:layout_marginBottom="36dp"
-        android:src="@drawable/chat" />
-
-    <ImageView
-android:id="@+id/settingBut"
-android:layout_width="47dp"
-android:layout_height="38dp"
-android:layout_alignParentEnd="true"
-android:layout_alignParentRight="true"
-android:layout_alignParentBottom="true"
-android:layout_marginEnd="104dp"
-android:layout_marginRight="104dp"
-android:layout_marginBottom="36dp"
-android:src="@drawable/sett" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="256dp"
+        android:text="Find A Parking Spot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/buttonpersonal"
-        android:layout_width="match_parent"
-        android:layout_height="94dp"
-        android:layout_alignParentStart="true"
+        android:id="@+id/rentit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="362dp"
-        android:text="Personal Details" />
+        android:layout_marginTop="392dp"
+        android:text="Rent out a space"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/Rentit"
-        android:layout_width="match_parent"
-        android:layout_height="88dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="-1dp"
-        android:layout_marginBottom="136dp"
-        android:text="Rent Out A Space" />
+        android:id="@+id/signout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="544dp"
+        android:text="Sign Out"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/searchaspace"
-        android:layout_width="match_parent"
-        android:layout_height="96dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="246dp"
-        android:text="Search For A Space" />
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
