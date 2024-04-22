@@ -95,9 +95,9 @@
                 android:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
             <FrameLayout
+                android:id="@+id/fragment_container"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/fragment_container"/>
+                android:layout_height="match_parent" />
 
         </LinearLayout>
 
@@ -110,8 +110,8 @@
             android:layout_gravity="start"
             app:headerLayout="@layout/nav_header"
             app:menu="@menu/nav_menu"
-            app:itemIconTint="@color/lavender"
-            app:itemTextColor="@color/lavender"
+            app:itemIconTint="#4BB0E9"
+            app:itemTextColor="@color/black"
             app:layout_constraintLeft_toLeftOf="parent"/>
 
     </androidx.drawerlayout.widget.DrawerLayout>
