@@ -9,10 +9,10 @@ import androidx.annotation.Nullable;
 
 public class DatabaseHelper2 extends SQLiteOpenHelper {
 
-    public static final String databaseName = "SignLog.db";
+    public static final String databaseName = "rent.db";
 
     public DatabaseHelper2(@Nullable Context context) {
-        super(context, "space.db", null, 1);
+        super(context, "rent.db", null, 1);
     }
 
     @Override
@@ -43,17 +43,7 @@ public class DatabaseHelper2 extends SQLiteOpenHelper {
             return true;
         }
     }
-
-    public Boolean checkaddress(String address){
-        SQLiteDatabase MyDatabase = this.getWritableDatabase();
-        Cursor cursor = MyDatabase.rawQuery("Select * from users where address =? ", new String[]{address});
-
-        if(cursor.getCount() > 0) {
-            return true;
-        }else {
-            return false;
-        }
-    }
+    
     public Boolean checkaddressspace(String address, String space,String preference,String duration, String timing,String amount){
         SQLiteDatabase MyDatabase = this.getWritableDatabase();
         Cursor cursor = MyDatabase.rawQuery("Select * from users where address = ? and space = ? and preference = ? and duration = ? and timing = ? and amount = ?  ", new String[]{address, space, preference, duration, timing, amount});

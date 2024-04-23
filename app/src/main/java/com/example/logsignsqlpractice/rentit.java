@@ -7,12 +7,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
 import com.example.logsignsqlpractice.databinding.ActivityRentitBinding;
-
 public class rentit extends AppCompatActivity {
 
     public Button saveButton2;
@@ -24,6 +19,8 @@ public class rentit extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rentit);
+
+
         saveButton2=findViewById(R.id.save);
         saveButton2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +48,12 @@ public class rentit extends AppCompatActivity {
                     Toast.makeText(rentit.this, "All fields are mandatory", Toast.LENGTH_SHORT).show();
                 else{
                     Boolean checkCredentials = databaseHelper2.checkaddressspace(address, spaceedittext,vehiclepreference,dates,timingofavail,amount);
+                    Boolean insert = databaseHelper2.insertData(address, spaceedittext,vehiclepreference,dates,timingofavail,amount);
+                    if(insert == true){
+                        Toast.makeText(rentit.this, "Shared Successfully!", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(),activity_login.class);
+                        startActivity(intent);
+                    }
 
                     if(checkCredentials == true){
                         Toast.makeText(rentit.this, "Shared Successfully", Toast.LENGTH_SHORT).show();
@@ -72,10 +75,5 @@ public class rentit extends AppCompatActivity {
             }
         });
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
     }
 }

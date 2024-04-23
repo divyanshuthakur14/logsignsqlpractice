@@ -17,7 +17,7 @@
             android:exported="false" />
         <activity
             android:name=".rentit"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".parkspot"
             android:exported="true" />

@@ -65,7 +65,7 @@
 
             <EditText
 
-                android:id="@+id/emailEditText"
+                android:id="@+id/emailte"
                 android:layout_width="match_parent"
                 android:layout_height="61dp"
                 android:layout_marginTop="8dp"
@@ -87,7 +87,7 @@
 
 
             <Button
-                android:id="@+id/save"
+                android:id="@+id/saveb"
                 android:layout_width="wrap_content"
                 android:layout_height="57dp"
                 android:layout_gravity="center"
