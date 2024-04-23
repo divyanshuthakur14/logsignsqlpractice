@@ -65,18 +65,18 @@
 
             <EditText
 
+                android:id="@+id/emailEditText"
                 android:layout_width="match_parent"
                 android:layout_height="61dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/lavender_border"
-
-                android:hint="enter_your_email"
+                android:hint="Enter Your Phone Number"
                 android:inputType="textEmailAddress"
                 android:padding="10dp"
                 tools:ignore="DuplicateIds" />
 
             <EditText
-
+                android:id="@+id/addressEditText"
                 android:layout_width="match_parent"
                 android:layout_height="61dp"
                 android:layout_marginTop="20dp"
@@ -87,7 +87,7 @@
 
 
             <Button
-                android:id="@+id/saveButton"
+                android:id="@+id/saveButton2"
                 android:layout_width="wrap_content"
                 android:layout_height="57dp"
                 android:layout_gravity="center"
