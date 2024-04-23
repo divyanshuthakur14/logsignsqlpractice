@@ -13,13 +13,15 @@ import android.widget.Button;
 
 public class homeFragment extends Fragment {
 
-    public Button myButton;
+
 
     public Button personaldetails;
 
     public Button rentit;
 
     public Button parkingspot;
+
+    public Button logout;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -28,18 +30,6 @@ public class homeFragment extends Fragment {
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        // Find the button by its ID
-        myButton = view.findViewById(R.id.myButton);
-
-        // Set click listener
-        myButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), personaldetails.class);
-
-                startActivity(intent);
-            }
-        });
 
 
         personaldetails=view.findViewById(R.id.personaldetails);
@@ -55,7 +45,7 @@ public class homeFragment extends Fragment {
         rentit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(getActivity(),personaldetails.class);
+                Intent intent= new Intent(getActivity(),rentit.class);
                 startActivity(intent);
             }
         });
@@ -64,7 +54,16 @@ public class homeFragment extends Fragment {
         parkingspot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(getActivity(),personaldetails.class);
+                Intent intent= new Intent(getActivity(),parkspot.class);
+                startActivity(intent);
+            }
+        });
+
+        logout=view.findViewById(R.id.logout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getActivity(),activity_login.class);
                 startActivity(intent);
             }
         });
