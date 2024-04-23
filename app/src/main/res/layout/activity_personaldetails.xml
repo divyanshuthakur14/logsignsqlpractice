@@ -70,7 +70,7 @@
                 android:layout_marginTop="8dp"
                 android:background="@drawable/lavender_border"
 
-                android:hint="@string/enter_your_email"
+                android:hint="enter_your_email"
                 android:inputType="textEmailAddress"
                 android:padding="10dp"
                 tools:ignore="DuplicateIds" />

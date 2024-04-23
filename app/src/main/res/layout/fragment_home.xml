@@ -7,12 +7,42 @@
     tools:context=".homeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/rentit"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Home Fragment"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"
-        android:textColor="@color/lavender"/>
+        android:layout_below="@id/personaldetails"
+        android:text="Rent It out"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"/>
+
+    <Button
+        android:id="@+id/parkingspot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rentit"
+        android:text="Find A Spot"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"/>
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/parkingspot"
+        android:text="Sign Out"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp" />
+
+    <Button
+        android:id="@+id/personaldetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Personal Details"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="32dp"/>
+
+
 
 </RelativeLayout>
