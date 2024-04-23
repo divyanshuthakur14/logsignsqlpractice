@@ -20,27 +20,21 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
+import androidx.fragment.app.Fragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
-    public Button personaldetails;
-    public Button parkingspot;
 
-    public Button rentit;
-    public Button signout;
+
+
+
+
     public DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        personaldetails=findViewById(R.id.personaldetails);
-        personaldetails.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent= new Intent(MainActivity.this,personaldetails.class);
-                    startActivity(intent);
-                }
-            });
+
         Toolbar toolbar = findViewById(R.id.toolbar); //Ignore red line errors
         setSupportActionBar(toolbar);
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -54,34 +48,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new homeFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         };
-
-        parkingspot=findViewById(R.id.parkingspot);
-        parkingspot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(MainActivity.this,personaldetails.class);
-                startActivity(intent);
-            }
-        });
-
-        rentit=findViewById(R.id.rentit);
-        rentit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(MainActivity.this,personaldetails.class);
-                startActivity(intent);
-            }
-        });
-
-        signout=findViewById(R.id.signout);
-        signout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(MainActivity.this,activity_login.class);
-                startActivity(intent);
-            }
-        });
-
 
         EdgeToEdge.enable(this);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -103,8 +69,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new sharefragment()).commit();
         } else if (itemId == R.id.nav_about) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new aboutfragment()).commit();
-        } else if (itemId == R.id.nav_logout) {
-            Toast.makeText(this, "Logout!", Toast.LENGTH_SHORT).show();
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
