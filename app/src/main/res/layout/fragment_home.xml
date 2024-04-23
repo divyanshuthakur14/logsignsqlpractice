@@ -15,4 +15,35 @@
         android:layout_centerInParent="true"
         android:textColor="@color/lavender"/>
 
+    <Button
+        android:id="@+id/myButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click me" />
+
+    <Button
+        android:id="@+id/personaldetails"
+        android:layout_width="418dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="128dp"
+        android:text="Personal Details"/>
+
+    <Button
+        android:id="@+id/rentit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="392dp"
+        android:text="Rent out a space" />
+
+
+    <Button
+        android:id="@+id/parkingspot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="256dp"
+        android:text="Find A Parking Spot"
+        />
+
+
 </RelativeLayout>

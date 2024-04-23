@@ -1,5 +1,6 @@
 package com.example.logsignsqlpractice;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,15 +8,69 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 public class homeFragment extends Fragment {
 
+    public Button myButton;
+
+    public Button personaldetails;
+
+    public Button rentit;
+
+    public Button parkingspot;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        // Find the button by its ID
+        myButton = view.findViewById(R.id.myButton);
+
+        // Set click listener
+        myButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), personaldetails.class);
+
+                startActivity(intent);
+            }
+        });
+
+
+        personaldetails=view.findViewById(R.id.personaldetails);
+        personaldetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getActivity(),personaldetails.class);
+                startActivity(intent);
+            }
+        });
+
+        rentit=view.findViewById(R.id.rentit);
+        rentit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getActivity(),personaldetails.class);
+                startActivity(intent);
+            }
+        });
+
+        parkingspot=view.findViewById(R.id.parkingspot);
+        parkingspot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getActivity(),personaldetails.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+        return view;
     }
 }
