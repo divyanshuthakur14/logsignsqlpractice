@@ -6,16 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".homeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <Button
-        android:id="@+id/rentit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/personaldetails"
-        android:text="Rent It out"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="64dp"/>
-
     <Button
         android:id="@+id/parkingspot"
         android:layout_width="match_parent"
@@ -43,6 +33,13 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="32dp"/>
 
+    <Button
+        android:id="@+id/rentit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/personaldetails"
+        android:layout_marginTop="55dp"
+        android:text="Rent It out" />
 
 
 </RelativeLayout>
