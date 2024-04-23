@@ -19,6 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
+            android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintTop_toTopOf="parent"
             tools:layout_editor_absoluteX="-16dp">
@@ -32,50 +33,42 @@
 
             <TextView
 
-                android:layout_width="match_parent"
-                android:layout_height="171dp"
+                android:layout_width="345dp"
+                android:layout_height="125dp"
+                android:background="@drawable/lavender_border"
                 android:fontFamily="serif-monospace"
                 android:gravity="center"
                 android:padding="16dp"
                 android:text="About Us"
                 android:textColor="#F0036B93"
                 android:textSize="50sp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:background="@drawable/lavender_border"
-                android:text="Welcome to ParknEase"
-                android:layout_gravity="center"
-                android:padding="8dp"
-                android:textSize="18sp"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/black"/>
 
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/loginRedirectText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-                android:text="At ParknEase, we're dedicated to simplifying the way you park.\n Our mission is to provide seamless parking solutions that save you time and hassle, so you can focus on what matters most."
                 android:layout_gravity="center"
-                android:padding="8dp"
-                android:textSize="18sp"
                 android:layout_marginTop="8dp"
-                android:textColor="@color/black"/>
+                android:fontFamily="serif"
+                android:padding="8dp"
+                android:text="At ParknEase, we're dedicated to simplifying the way you park.\nOur mission is to provide seamless parking solutions that save you time and hassle, so you can focus on what matters most."
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:background="@drawable/lavender_border"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                android:padding="8dp"
                 android:text="What We Offer"
-                android:layout_gravity="center"
-                android:padding="8dp"
-                android:textSize="18sp"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
 
             <TextView
@@ -83,63 +76,67 @@
                 android:layout_height="wrap_content"
 
 
-                android:text="ParknEase is your go-to solution for stress-free parking. \nWhether you're searching for parking spots in crowded urban areas, planning your parking in advance, or looking for convenient payment options, we've got you covered. \nOur user-friendly interface and advanced features make parking effortless and efficient."
                 android:layout_gravity="center"
-                android:padding="8dp"
-                android:textSize="18sp"
                 android:layout_marginTop="8dp"
-                android:textColor="@color/black"/>
+                android:fontFamily="serif"
+                android:padding="8dp"
+                android:text="ParknEase is your go-to solution for stress-free parking. \nWhether you're searching for parking spots in crowded urban areas, planning your parking in advance, or looking for convenient payment options, we've got you covered.\nOur user-friendly interface and advanced features make parking effortless and efficient."
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:background="@drawable/lavender_border"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                android:padding="8dp"
                 android:text="Our Commitment"
-                android:layout_gravity="center"
-                android:padding="8dp"
-                android:textSize="18sp"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:fontFamily="serif"
+                android:padding="8dp"
                 android:text="Behind ParknEase is a team of passionate individuals who understand the challenges of urban parking.\nWith our expertise in technology and transportation, we're committed to revolutionizing the way you park. We strive to provide innovative solutions that enhance your parking experience while contributing to smarter and more sustainable cities."
-                android:layout_gravity="center"
-                android:padding="8dp"
-                android:textSize="18sp"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/black"/>
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:background="@drawable/lavender_border"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                android:padding="8dp"
                 android:text="Get in Touch"
-                android:layout_gravity="center"
-                android:padding="8dp"
-                android:textSize="18sp"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:fontFamily="serif"
+                android:padding="8dp"
                 android:text="We value your feedback and are here to assist you every step of the way. Have questions, suggestions, or just want to share your parking experience with us? Don't hesitate to reach out to our friendly support team at [DriveNease2024@gmail.com].Your satisfaction is our top priority.
 
 Thank you for choosing DriveNease for all your parking needs!"
-                android:layout_gravity="center"
-                android:padding="8dp"
-                android:textSize="18sp"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/black"/>
-
-
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
 
         </LinearLayout>
