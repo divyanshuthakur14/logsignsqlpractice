@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">ParknEase</string>
+    <string name="app_name" translatable="false">DrivenEase</string>
     <string name="open_nav" translatable="false">Open Navigation Drawer</string>
     <string name="close_nav" translatable="false">Close Navigation Drawer</string>
     <!-- TODO: Remove or change this placeholder text -->
