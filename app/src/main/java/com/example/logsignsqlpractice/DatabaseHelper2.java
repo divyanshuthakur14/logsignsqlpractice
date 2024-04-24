@@ -21,8 +21,8 @@ public class DatabaseHelper2 extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase MyDB, int i, int i1) {
-        MyDB.execSQL("drop Table if exists users2");
+    public void onUpgrade(SQLiteDatabase MyDatabase, int i, int i1) {
+        MyDatabase.execSQL("drop Table if exists users2");
     }
 
     public Boolean insertData(String address, String space,String preference,String duration,String timing,String amount){

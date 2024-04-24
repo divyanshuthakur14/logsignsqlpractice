@@ -70,7 +70,7 @@ public class rentit extends AppCompatActivity {
         binding1.save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(rentit.this, homeFragment.class);
+                Intent intent = new Intent(rentit.this, MainActivity.class);
                 startActivity(intent);
             }
         });

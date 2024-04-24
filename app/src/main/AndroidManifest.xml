@@ -19,6 +19,9 @@
             android:name=".rentit"
             android:exported="false" />
         <activity
+            android:name=".homeFragment"
+            android:exported="false" />
+        <activity
             android:name=".parkspot"
             android:exported="true" />
         <activity

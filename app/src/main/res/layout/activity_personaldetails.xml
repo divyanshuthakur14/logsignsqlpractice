@@ -43,7 +43,7 @@
 
 
             <EditText
-                android:id="@+id/nameEditText"
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="61dp"
                 android:layout_marginTop="30dp"
@@ -54,7 +54,7 @@
 
             <!-- Email -->
             <EditText
-                android:id="@+id/ageEditText"
+                android:id="@+id/age"
                 android:layout_width="match_parent"
                 android:layout_height="61dp"
                 android:layout_marginTop="20dp"
@@ -65,24 +65,24 @@
 
             <EditText
 
-                android:id="@+id/emailte"
+                android:id="@+id/phonenumber"
                 android:layout_width="match_parent"
                 android:layout_height="61dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/lavender_border"
                 android:hint="Enter Your Phone Number"
-                android:inputType="textEmailAddress"
+                android:inputType="number"
                 android:padding="10dp"
                 tools:ignore="DuplicateIds" />
 
             <EditText
-                android:id="@+id/addressEditText"
+                android:id="@+id/address1"
                 android:layout_width="match_parent"
                 android:layout_height="61dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/lavender_border"
                 android:hint="Enter your Address"
-                android:inputType="textEmailAddress"
+                android:inputType="textLongMessage"
                 android:padding="8dp" />
 
 

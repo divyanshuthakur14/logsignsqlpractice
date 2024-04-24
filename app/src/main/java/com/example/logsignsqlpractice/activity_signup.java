@@ -20,7 +20,11 @@ public class activity_signup extends AppCompatActivity {
         binding = ActivitySignupBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+
+
         databaseHelper = new DatabaseHelper(this);
+
+
 
         binding.signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
