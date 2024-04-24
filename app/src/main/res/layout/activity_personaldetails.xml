@@ -38,7 +38,7 @@
                 android:gravity="center"
                 android:padding="16dp"
                 android:text="Personal Details"
-                android:textColor="#F01886B1"
+                android:textColor="#F0D5D8DA"
                 android:textSize="50sp" />
 
 
@@ -50,9 +50,10 @@
                 android:background="@drawable/lavender_border"
                 android:hint="Enter your name"
                 android:inputType="text"
-                android:padding="8dp" />
+                android:padding="10dp" />
 
             <!-- Email -->
+
             <EditText
                 android:id="@+id/age"
                 android:layout_width="match_parent"
@@ -61,14 +62,14 @@
                 android:background="@drawable/lavender_border"
                 android:hint="Enter your age"
                 android:inputType="number"
-                android:padding="8dp" />
+                android:padding="10dp" />
 
             <EditText
 
                 android:id="@+id/phonenumber"
                 android:layout_width="match_parent"
                 android:layout_height="61dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/lavender_border"
                 android:hint="Enter Your Phone Number"
                 android:inputType="number"
@@ -83,11 +84,14 @@
                 android:background="@drawable/lavender_border"
                 android:hint="Enter your Address"
                 android:inputType="textLongMessage"
-                android:padding="8dp" />
+                android:padding="10dp" />
+
+
+
 
 
             <Button
-                android:id="@+id/saveb"
+                android:id="@+id/save"
                 android:layout_width="wrap_content"
                 android:layout_height="57dp"
                 android:layout_gravity="center"

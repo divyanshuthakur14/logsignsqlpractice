@@ -70,6 +70,8 @@ public class homeFragment extends Fragment {
 
 
 
+
+
         return view;
     }
 }

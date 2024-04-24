@@ -9,70 +9,80 @@
     tools:context=".homeFragment"
     android:background="@drawable/gradient_background">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/scrollView2"
-        android:layout_width="413dp"
-        android:layout_height="776dp"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="1dp">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="414dp"
-            android:layout_height="349dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logowithcirlce"
-            tools:layout_editor_absoluteX="-2dp" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="414dp"
+        android:layout_height="349dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logowithcirlce" />
 
 
+    <Button
+        android:id="@+id/rentit"
+        android:layout_width="290dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/yellow_border"
+        android:text="Rent It out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
 
-        <Button
-            android:id="@+id/personaldetails"
-            android:layout_width="282dp"
-            android:layout_height="47dp"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/lavender_border"
-            android:text="Personal Details"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rentit" />
+    <Button
+        android:id="@+id/personaldetails"
+        android:layout_width="290dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/yellow_border"
+        android:text="Personal Details"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rentit"
+        app:layout_constraintVertical_bias="0.123" />
 
-        <Button
-            android:id="@+id/rentit"
-            android:layout_width="282dp"
-            android:layout_height="47dp"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/lavender_border"
-            android:text="Rent It out"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+    <Button
+        android:id="@+id/parkingspot"
+        android:layout_width="290dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/yellow_border"
+        android:text="Find A Spot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/personaldetails"
+        app:layout_constraintVertical_bias="0.119" />
 
-        <Button
-            android:id="@+id/parkingspot"
-            android:layout_width="282dp"
-            android:layout_height="47dp"
-            android:background="@drawable/lavender_border"
-            android:layout_marginTop="28dp"
-            android:text="Find A Spot"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/personaldetails" />
-
-
-        <Button
-            android:id="@+id/logout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/lavender_border"
-            android:text="Sign Out"
-            app:layout_constraintTop_toBottomOf="@+id/parkingspot"
-            tools:layout_editor_absoluteX="154dp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/yellow_border"
+        android:text="Sign Out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parkingspot"
+        app:layout_constraintVertical_bias="0.306"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

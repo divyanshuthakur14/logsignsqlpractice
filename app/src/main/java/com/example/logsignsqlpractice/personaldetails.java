@@ -1,5 +1,8 @@
 package com.example.logsignsqlpractice;
 
+import static com.example.logsignsqlpractice.R.*;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,12 +12,14 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.logsignsqlpractice.R.id;
 
 
 public class personaldetails extends AppCompatActivity {
     public EditText name, age,phonenumber, address1;
     public Button insert;
     DatabaseHelper3 DB;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +29,8 @@ public class personaldetails extends AppCompatActivity {
         phonenumber = findViewById(R.id.phonenumber);
         address1 = findViewById(R.id.address1);
 
-        insert = findViewById(R.id.saveb);
+
+        insert = findViewById(R.id.save);
         DB = new DatabaseHelper3(this);
         insert.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +39,7 @@ public class personaldetails extends AppCompatActivity {
                 String ageTXT = age.getText().toString();
                 String phonenumberTXT = phonenumber.getText().toString();
                 String address1TXT = address1.getText().toString();
+
 
                 Boolean checkinsertdata = DB.insertuserdata(nameTXT, ageTXT, phonenumberTXT, address1TXT);
                 if (checkinsertdata == true) {
