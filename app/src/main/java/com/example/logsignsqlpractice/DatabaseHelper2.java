@@ -44,12 +44,13 @@ public class DatabaseHelper2 extends SQLiteOpenHelper {
 
 
 
-    public Cursor getdata() {
-        SQLiteDatabase DaB = this.getWritableDatabase();
 
-        Cursor cursor = DaB.rawQuery("Select * from rentdetails where address=?", null);
+    public Cursor getData() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM rentdetails", null);
         return cursor;
     }
+
 }
 
 

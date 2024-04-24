@@ -28,6 +28,8 @@ public class rentit extends AppCompatActivity {
 
         insert = findViewById(R.id.save);
         DaB = new DatabaseHelper2(this);
+        
+
         insert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,6 +44,19 @@ public class rentit extends AppCompatActivity {
                 if (checkinsertdata == true) {
                     Toast.makeText(rentit.this, "new entry inserted", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                    String data1 = address.getText().toString().trim();
+                    String data2 = space.getText().toString().trim();
+                    String data3 = vehiclepreference.getText().toString().trim();
+                    String data4 = dates.getText().toString().trim();
+                    String data5 = timingofavail.getText().toString().trim();
+                    String data6 = amount.getText().toString().trim();
+
+                    intent.putExtra("data1", data1);
+                    intent.putExtra("data2", data2);
+                    intent.putExtra("data3", data3);
+                    intent.putExtra("data4", data4);
+                    intent.putExtra("data5", data5);
+                    intent.putExtra("data6", data6);
                     startActivity(intent);
                 } else{
                     Toast.makeText(rentit.this, "entry not inserted", Toast.LENGTH_SHORT).show();
