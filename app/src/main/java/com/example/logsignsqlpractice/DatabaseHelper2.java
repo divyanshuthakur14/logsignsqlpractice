@@ -9,50 +9,47 @@ import androidx.annotation.Nullable;
 
 public class DatabaseHelper2 extends SQLiteOpenHelper {
 
-    public static final String databaseName = "rent.db";
-
-    public DatabaseHelper2(@Nullable Context context) {
-        super(context, "rent.db", null, 1);
+    public DatabaseHelper2( Context context) {
+        super(context, "rentit.db", null, 1);
     }
 
     @Override
-    public void onCreate(SQLiteDatabase MyDatabase) {
-        MyDatabase.execSQL("create Table users2(address TEXT primary key,space TEXT, preference TEXT,duration TEXT,timing TEXT,amount TEXT)");
+    public void onCreate(SQLiteDatabase DaB) {
+        DaB.execSQL("create Table rentdetails(address TEXT primary key,space TEXT,vehiclepreference TEXT,dates TEXT, timingofavail TEXT, amount TEXT)");
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase MyDatabase, int i, int i1) {
-        MyDatabase.execSQL("drop Table if exists users2");
+    public void onUpgrade(SQLiteDatabase DaB, int oldVersion, int newVersion) {
+        DaB.execSQL("drop table if exists rentdetails");
     }
-
-    public Boolean insertData(String address, String space,String preference,String duration,String timing,String amount){
-        SQLiteDatabase MyDatabase = this.getWritableDatabase();
+    public Boolean insertuserdata(String  address, String space, String vehiclepreference, String dates ,String timingofavail ,String amount ){
+        SQLiteDatabase DaB= this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("address", address);
-        contentValues.put("space", space);
-        contentValues.put("preference", preference);
-        contentValues.put("duration", duration);
-        contentValues.put("timing", timing);
-        contentValues.put("amount", amount);
+        contentValues.put("address",address);
+        contentValues.put("space",space);
+        contentValues.put("vehiclepreference",vehiclepreference);
+        contentValues.put("dates ",dates );
+        contentValues.put("timingofavail",timingofavail);
+        contentValues.put("amount",amount);
 
-        long result = MyDatabase.insert("users2", null, contentValues);
-
-        if (result == -1) {
+        long result=DaB.insert("rentdetails",null,contentValues);
+        if(result==-1){
             return false;
-        } else {
-            return true;
-        }
-    }
-    
-    public Boolean checkaddressspace(String address, String space,String preference,String duration, String timing,String amount){
-        SQLiteDatabase MyDatabase = this.getWritableDatabase();
-        Cursor cursor = MyDatabase.rawQuery("Select * from users where address = ? and space = ? and preference = ? and duration = ? and timing = ? and amount = ?  ", new String[]{address, space, preference, duration, timing, amount});
-
-        if (cursor.getCount() > 0) {
-            return true;
         }else {
-            return false;
+            return true;
         }
+
     }
 
+
+
+
+    public Cursor getdata() {
+        SQLiteDatabase DaB = this.getWritableDatabase();
+
+        Cursor cursor = DaB.rawQuery("Select * from rentdetails where address=?", null);
+        return cursor;
+    }
 }
+
+

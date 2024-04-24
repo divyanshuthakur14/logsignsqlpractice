@@ -4,76 +4,50 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.logsignsqlpractice.databinding.ActivityRentitBinding;
+
+
+
 public class rentit extends AppCompatActivity {
-
-    public Button saveButton2;
-
-    ActivityRentitBinding binding1;
-    DatabaseHelper2 databaseHelper2;
-
+    public EditText address, space,vehiclepreference, dates,timingofavail,amount;
+    public Button insert;
+    DatabaseHelper2 DaB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rentit);
+        address = findViewById(R.id.address);
+        space = findViewById(R.id.space);
+        vehiclepreference = findViewById(R.id.vehiclepreference);
+        dates= findViewById(R.id.dates);
+        timingofavail = findViewById(R.id.timingofavail);
+        amount = findViewById(R.id.amount);
 
-
-        saveButton2=findViewById(R.id.save);
-        saveButton2.setOnClickListener(new View.OnClickListener() {
+        insert = findViewById(R.id.save);
+        DaB = new DatabaseHelper2(this);
+        insert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(rentit.this,homeFragment.class);
-                startActivity(intent);
-            }
+                String addressTXT = address.getText().toString();
+                String spaceTXT = space.getText().toString();
+                String vehiclepreferenceTXT = vehiclepreference.getText().toString();
+                String datesTXT = dates.getText().toString();
+                String timingofavailTXT = timingofavail.getText().toString();
+                String amountTXT = amount.getText().toString();
+
+                Boolean checkinsertdata = DaB.insertuserdata(addressTXT, spaceTXT, vehiclepreferenceTXT, datesTXT,timingofavailTXT,amountTXT);
+                if (checkinsertdata == true) {
+                    Toast.makeText(rentit.this, "new entry inserted", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                    startActivity(intent);
+                } else{
+                    Toast.makeText(rentit.this, "entry not inserted", Toast.LENGTH_SHORT).show();
+
+                }}
         });
-        binding1 = ActivityRentitBinding.inflate(getLayoutInflater());
-        setContentView(binding1.getRoot());
-
-        databaseHelper2 = new DatabaseHelper2(this);
-
-        binding1.save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String address = binding1.address.getText().toString();
-                String spaceedittext = binding1.spaceedittext.getText().toString();
-                String vehiclepreference = binding1.vehiclepreference.getText().toString();
-                String dates = binding1.dates.getText().toString();
-                String timingofavail = binding1.timingofavail.getText().toString();
-                String amount = binding1.amount.getText().toString();
-
-                if(address.equals("")||spaceedittext.equals("")|| vehiclepreference.equals("") ||dates.equals("") ||timingofavail.equals("")  ||amount.equals("")  )
-                    Toast.makeText(rentit.this, "All fields are mandatory", Toast.LENGTH_SHORT).show();
-                else{
-                    Boolean checkCredentials = databaseHelper2.checkaddressspace(address, spaceedittext,vehiclepreference,dates,timingofavail,amount);
-                    Boolean insert = databaseHelper2.insertData(address, spaceedittext,vehiclepreference,dates,timingofavail,amount);
-                    if(insert == true){
-                        Toast.makeText(rentit.this, "Shared Successfully!", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(),activity_login.class);
-                        startActivity(intent);
-                    }
-
-                    if(checkCredentials == true){
-                        Toast.makeText(rentit.this, "Shared Successfully", Toast.LENGTH_SHORT).show();
-                        Intent intent  = new Intent(getApplicationContext(), homeFragment.class);
-                        startActivity(intent);
-                    }else{
-                        Toast.makeText(rentit.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            }
-        });
+    }}
 
 
-        binding1.save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(rentit.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
-    }
-}

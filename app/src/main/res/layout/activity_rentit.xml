@@ -34,7 +34,7 @@
         tools:layout_editor_absoluteX="0dp" />
 
     <EditText
-        android:id="@+id/spaceedittext"
+        android:id="@+id/space"
         android:layout_width="match_parent"
         android:layout_height="61dp"
         android:layout_marginTop="212dp"
